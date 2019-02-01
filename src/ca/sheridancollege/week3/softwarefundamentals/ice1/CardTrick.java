@@ -38,11 +38,11 @@ public class CardTrick {
         */
         Card luckyCard = new Card();
         luckyCard.setValue(13);
-        luckCard.setSuit("Hearts");
+        luckyCard.setSuit("Hearts");
         boolean guess = false;
         Card userCard = luckyCard;//new Card();
-        userCard.setValue(cardValue);
-        userCard.setSuit(cardSuit);
+        //userCard.setValue(cardValue);
+        //userCard.setSuit(cardSuit);
         for (int i = 0; i<magicHand.length; i++) {
             
             if (userCard.getSuit().equals(magicHand[i].getSuit())
