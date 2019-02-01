@@ -35,10 +35,13 @@ public class CardTrick {
         String suit = in.nextLine();
         in.close();
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(Integer.parseInt(1));
+        luckyCard.setSuit(Card.SUITS[Integer.parseInt(2)]); 
+        
         Card userCard = new Card();
         userCard.setValue(Integer.parseInt(value));
-        userCard.setSuit(Card.SUITS[Integer.parseInt(suit)]);
-        
+        userCard.setSuit(Card.SUITS[Integer.parseInt(suit)]);       
         boolean inHand = false; 
         
         for (int i=0; i<magicHand.length; i++){
