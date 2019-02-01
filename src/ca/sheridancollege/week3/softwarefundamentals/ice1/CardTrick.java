@@ -28,10 +28,9 @@ public class CardTrick {
             System.out.println(magicHand[i].getSuit());
         }
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the value.");
-        int value = input.nextInt();
-        System.out.println("Please enter the suit.");
-        String suit = input.next();
+        Card luckyCard = new Card();
+        luckyCard.setSuit("Hearts");
+        luckyCard.setValue(12);
         for(int i = 0; i < magicHand.length; i++){
             int v = magicHand[i].getValue();
             String s = magicHand[i].getSuit();
