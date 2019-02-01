@@ -26,7 +26,11 @@ public class CardTrick {
         {
             Scanner sc = new Scanner(System.in);
             Card c = new Card();
-            c.setValue(4);
+            
+            
+            Card luckyCard = new Card();
+            c.setvalue(4);
+            c.setSuit("Heart");
             
             
             
