@@ -23,6 +23,7 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
+        Card luckyCard = new Card();
         Scanner sc = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         Random rand = new Random();
@@ -49,6 +50,9 @@ public class CardTrick {
                 System.out.println("Your card is not here");
             }
         }
+        
+        luckyCard.setSuit("Hearts");
+        luckyCard.setValue(4);
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
