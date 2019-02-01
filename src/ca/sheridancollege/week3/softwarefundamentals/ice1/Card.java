@@ -19,8 +19,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
-   private int value;//1-13
-   private int a;
+   private int val;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
@@ -41,8 +40,17 @@ public class Card {
      * @return the value
      */
     public int getValue() {
-        return value;
+                switch (val) {
+        case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8:
+        case 9: case 10: case 11: case 12: case 13: return val;
+        break;
+           default:  return 1;
+        }
     }
+
+        return val;
+    }
+
 
     /**
      * @param value the value to set
