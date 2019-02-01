@@ -21,11 +21,11 @@ public class CardTrick {
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
-            c.setValue((int)(Math.random() * ((13 - 1) + 1)) + 1);
-            c.setSuit(Card.SUITS[(int)(Math.random() * ((3 - 0) + 1)) + 0]);
-            System.out.println(c.getValue());
-            System.out.println(c.getSuit());
+            magicHand[i] = new Card();
+            magicHand[i].setValue((int)(Math.random() * ((13 - 1) + 1)) + 1);
+            magicHand[i].setSuit(Card.SUITS[(int)(Math.random() * ((3 - 0) + 1)) + 0]);
+            System.out.println(magicHand[i].getValue());
+            System.out.println(magicHand[i].getSuit());
         }
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter the value.");
