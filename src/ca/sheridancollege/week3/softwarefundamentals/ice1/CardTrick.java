@@ -60,6 +60,11 @@ public class CardTrick {
         
         System.out.println(magicHand1[0].getSuit() + " " + magicHand1[0].getValue());
         
+        Card[] luckyCard = new Card[0];
+        luckyCard[0].setSuit("clubs");
+        luckyCard[0].setValue(5);
+            
+        
         
         
         
