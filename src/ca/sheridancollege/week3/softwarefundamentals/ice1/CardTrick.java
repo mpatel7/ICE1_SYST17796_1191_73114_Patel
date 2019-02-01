@@ -29,6 +29,7 @@ public class CardTrick {
         //Then report the result here
     }
     
+    //There is no validation on whether you have more than four of a kind.
     public static int randomCardNumber(){
         return (int) Math.floor(10 * Math.random());
     }
