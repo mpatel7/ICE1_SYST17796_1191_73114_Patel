@@ -29,17 +29,17 @@ public class CardTrick {
         
         Card luckyCard = new Card();
         luckyCard.setValue(1);
-        luckyCard.setSuit(Card.Suits[3];
+        luckyCard.setSuit(Card.Suits[3]);
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
         
-        Scanner in = new Scanner(System.in);
-        System.out.println("Please enter Card value");
-        double value= in.nextDouble();
-        System.out.println("Please enter suit");
-        String suit = in.next();
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Please enter Card value");
+//        double value= in.nextDouble();
+//        System.out.println("Please enter suit");
+//        String suit = in.next();
         
         
         System.out.println(suit.equals(suit));
