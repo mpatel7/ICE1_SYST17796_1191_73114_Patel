@@ -27,25 +27,25 @@ public class CardTrick {
             magicHand[i].setSuit(Card.SUITS[number]);
         }
   
-        Scanner in = new Scanner(System.in);
-        System.out.println("Pick a card, any card!");
-        System.out.println("Enter a numeric card value. (note that Ace = 1, Jack =11, Queen =12, King = 13)");
-        String value = in.nextLine();
-        System.out.println("Enter a numeric suit value. (hearts = 0, diamonds = 1, spades = 2, clubs = 3)");
-        String suit = in.nextLine();
-        in.close();
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Pick a card, any card!");
+//        System.out.println("Enter a numeric card value. (note that Ace = 1, Jack =11, Queen =12, King = 13)");
+//        String value = in.nextLine();
+//        System.out.println("Enter a numeric suit value. (hearts = 0, diamonds = 1, spades = 2, clubs = 3)");
+//        String suit = in.nextLine();
+//        in.close();
         
         Card luckyCard = new Card();
-        luckyCard.setValue(Integer.parseInt(1));
-        luckyCard.setSuit(Card.SUITS[Integer.parseInt(2)]); 
+        luckyCard.setValue(10);
+        luckyCard.setSuit(Card.SUITS[2]); 
         
-        Card userCard = new Card();
-        userCard.setValue(Integer.parseInt(value));
-        userCard.setSuit(Card.SUITS[Integer.parseInt(suit)]);       
+//        Card userCard = new Card();
+//        userCard.setValue(Integer.parseInt(value));
+//        userCard.setSuit(Card.SUITS[Integer.parseInt(suit)]);       
         boolean inHand = false; 
-        
+        System.out.println("Your card is the " + luckyCard.getValue() +" of " + luckyCard.getSuit());
         for (int i=0; i<magicHand.length; i++){
-            if ((magicHand[i].getSuit()==(userCard.getSuit())) && (magicHand[i].getValue() == userCard.getValue())){
+            if ((magicHand[i].getSuit()==(luckyCard.getSuit())) && (magicHand[i].getValue() == luckyCard.getValue())){
                 inHand = true;
                 break;
             }
