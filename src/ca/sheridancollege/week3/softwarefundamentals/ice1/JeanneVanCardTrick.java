@@ -41,12 +41,12 @@ public class JeanneVanCardTrick {
             magicHand[i].setSuit(magicHand[i].SUITS[randomSuit]);
         }
 
-        /*
+        // Hardcode a card to look for.
         Card luckyCard = new Card();
         luckyCard.setValue(12);
         luckyCard.setSuit("Hearts");
-        */
         
+        /*
         // Prompt the user for their card's value and suit, then receive.
         System.out.println("Pick a card, any card!");
         System.out.println("(Insert your card's value, first.)");
@@ -57,20 +57,21 @@ public class JeanneVanCardTrick {
         System.out.println("(Now then, insert your card's suit.");
         userSuit = keysIn.nextLine();
         userCard.setSuit(userSuit);
-
+        */
+        
         // Check if the randomly generated hand has this card,
         for (int j = 0; j < magicHand.length; j++) {
-            if (userCard.getValue() == magicHand[j].getValue() &&
-                userCard.getSuit().equals(magicHand[j].getSuit())) {
+            if (luckyCard.getValue() == magicHand[j].getValue() &&
+                luckyCard.getSuit().equals(magicHand[j].getSuit())) {
                 found = true;
             }
         }
         
         // Tell the user the results and their card.
-        System.out.println((found) ? "We found your card!" :
-                                     "We couldn't find your card.");
+        System.out.println((found) ? "We found the card!" :
+                                     "We couldn't find the card.");
 
-        System.out.println("It was the " + cardString(userCard) + ", right?");
+        System.out.println("It was the " + cardString(luckyCard) + ", right?");
     }
     
     /**
