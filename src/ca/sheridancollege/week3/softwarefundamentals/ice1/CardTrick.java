@@ -29,14 +29,22 @@ public class CardTrick {
         //Then report the result here
     }
     
-    //There is no validation on whether you have more than four of a kind.
+    //
+    /**Generates a random card number between 0 and 12 inclusive.
+     * There are 13 different kinds of cards per suit.
+     * There is no validation on whether you have more than four of a kind.
+     * @return returns a random integer.
+     */
     public static int randomCardNumber(){
-        return (int) Math.floor(10 * Math.random());
+        return ((int) Math.floor(100 * Math.random()))%13;
     }
     
+    /**Generates a random suit defined by an integer between 0 and 3.
+     * There four suits in a standard deck of playing cards.
+     * @return returns a random integer between 0 and 3 inclusive.
+     */
     public static int randomCardSuit(){
-        
-        return 0;
+        return ((int) Math.floor(10 * Math.random()))%4;
     }
     
 }
