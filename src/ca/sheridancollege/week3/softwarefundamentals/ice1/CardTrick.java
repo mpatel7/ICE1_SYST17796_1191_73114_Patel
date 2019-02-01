@@ -44,7 +44,7 @@ public class CardTrick {
         boolean cardInHand = false;
         
         // lucky card king of hearts
-        Card luckyCard = (13, "Hearts");
+        Card luckyCard = new Card(13, "Hearts");
         
         for (int i = 0; i < magicHand.length; i++) {
             if (fernsCard.getValue() == magicHand[i].getValue() && 
