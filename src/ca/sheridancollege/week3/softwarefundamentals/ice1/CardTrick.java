@@ -61,10 +61,13 @@ public class CardTrick {
         
         System.out.println("This was the hand:");
         for (int i = 0; i<magicHand.length; i++) {
-            System.out.println("Card " + i +". Suit: " + magicHand[i].getSuit()
+            System.out.println("Card " + (i+1) +". Suit: " + magicHand[i].getSuit()
                     + "; Value: "+ magicHand[i].getValue() + ";");
         }
         
+        System.out.println("This was your card:");
+        System.out.println("Card: " + userCard.getValue() + "; Suit: " + 
+                userCard.getSuit() + ";");
     }
     
     //
