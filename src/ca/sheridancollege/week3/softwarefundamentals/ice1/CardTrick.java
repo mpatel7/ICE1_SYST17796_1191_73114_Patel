@@ -38,9 +38,9 @@ public class CardTrick {
         Card userCard = new Card();
         userCard.setValue(cardValue);
         userCard.setSuit(cardSuit);
-        for (Card magicHand1 : magicHand) {
-            if (userCard.getSuit().equals(magicHand1.getSuit()) 
-                    && userCard.getValue() == magicHand1.getValue()) {
+        for (int i = 0; i<magicHand.length; i++) {
+            if (userCard.getSuit().equals(magicHand[i].getSuit()) 
+                    && userCard.getValue() == magicHand[i].getValue()) {
                 guess = true;
                 break;
             }
