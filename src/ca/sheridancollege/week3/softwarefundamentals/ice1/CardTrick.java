@@ -24,7 +24,7 @@ public class CardTrick {
             c.setSuit(Card.SUITS[randomCardSuit()]);
             magicHand[i] = c;
         }
-        
+        /*
         //insert code to ask the user for Card value and suit, create their card
         Scanner in = new Scanner(System.in);
         System.out.println("Guess a card in the hand of seven cards.");
@@ -35,8 +35,12 @@ public class CardTrick {
                 + "Clubs): ");
         String cardSuit = in.next();
         //Then report the result here
+        */
+        Card luckyCard = new Card();
+        luckyCard.setValue(13);
+        luckCard.setSuit("Hearts");
         boolean guess = false;
-        Card userCard = new Card();
+        Card userCard = luckyCard;//new Card();
         userCard.setValue(cardValue);
         userCard.setSuit(cardSuit);
         for (int i = 0; i<magicHand.length; i++) {
