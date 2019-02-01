@@ -30,25 +30,29 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         //
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a card value: ");
-        int value = input.nextInt();
-        input.nextLine();
-        System.out.print("Enter a suit: ");
-        String suit = input.nextLine();
         
-        Card fernsCard = new Card();
-        fernsCard.setValue(value);
-        fernsCard.setSuit(suit);
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Enter a card value: ");
+//        int value = input.nextInt();
+//        input.nextLine();
+//        System.out.print("Enter a suit: ");
+//        String suit = input.nextLine();
+//        
+//        Card fernsCard = new Card();
+//        fernsCard.setValue(value);
+//        fernsCard.setSuit(suit);
+        
+        // lucky card king of hearts
+        Card luckyCard = new Card();
+        luckyCard.setSuit("Hearts");
+        luckyCard.setValue(13);
+        
         
         boolean cardInHand = false;
         
-        // lucky card king of hearts
-        Card luckyCard = new Card(13, "Hearts");
-        
         for (int i = 0; i < magicHand.length; i++) {
-            if (fernsCard.getValue() == magicHand[i].getValue() && 
-                    fernsCard.getSuit().equals(magicHand[i].getSuit()))
+            if (luckyCard.getValue() == magicHand[i].getValue() && 
+                    luckyCard.getSuit().equals(magicHand[i].getSuit()))
                 cardInHand = true;
         }
         
