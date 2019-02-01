@@ -22,6 +22,7 @@ public class CardTrick {
             Card c = new Card();
             c.setValue(randomCardNumber());
             c.setSuit(Card.SUITS[randomCardSuit()]);
+            magicHand[i] = c;
         }
         
         //insert code to ask the user for Card value and suit, create their card
@@ -39,10 +40,12 @@ public class CardTrick {
         userCard.setValue(cardValue);
         userCard.setSuit(cardSuit);
         for (int i = 0; i<magicHand.length; i++) {
-            if (userCard.getSuit().equals(magicHand[i].getSuit()) 
+            
+            if (userCard.getSuit().equals(magicHand[i].getSuit())
                     && userCard.getValue() == magicHand[i].getValue()) {
                 guess = true;
                 break;
+            
             }
         }
         if (guess){
@@ -50,6 +53,12 @@ public class CardTrick {
                 + "Good Job!");
         } else {
             System.out.println("Sorry your guess was not in the hand!");
+        }
+        
+        System.out.println("This was the hand:");
+        for (int i = 0; i<magicHand.length; i++) {
+            System.out.println("Card " + i +". Suit: " + magicHand[i].getSuit()
+                    + "; Value: "+ magicHand[i].getValue() + ";");
         }
         
     }
