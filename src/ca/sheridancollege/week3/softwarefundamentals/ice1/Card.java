@@ -19,6 +19,8 @@ public class Card {
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
    private int a;
+   private int b;
+   private int c;
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
