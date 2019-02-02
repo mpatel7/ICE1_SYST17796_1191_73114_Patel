@@ -21,28 +21,45 @@ public class CardTrick {
         Scanner scan = new Scanner(System.in);
         Card userCard = new Card();
         
-        //create variables
-        int value = 0;
-        String suit = "";
-        
        for (int i=0; i<magicHand.length; i++)
        {
         //c.setValue(insert call to random number generator here)
         Random rand = new Random();
-        magicHand[i].setValue(rand.nextInt());
+        magicHand[i] = new Card();
+        magicHand[i].setValue(rand.nextInt(13)+1);
         //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         magicHand[i].setSuit(Card.SUITS[rand.nextInt(3)+0]);    
         System.out.println(magicHand[i]);
-    }    
+        }    
 
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter the card value");
-        value = scan.nextInt();
-        System.out.println("Enter the suit");
-        suit = scan.nextLine();
-        scan.next();
-        userCard.setValue(value);
-        userCard.setSuit(suit);
+        boolean check;
+        do{
+            System.out.println("Enter the card value between 1 - 13");
+            int value = scan.nextInt();
+            if(value < 1 || value > 13){
+                System.out.println("Value invalid");
+                check = false;
+            }else{
+                userCard.setValue(value);
+                check = true;
+            }
+        }while(!check);       
+
+        do{
+            System.out.println("Enter the suit (Clubs, Spades, Diamond, Hearts)");
+            String suit = scan.next();
+            if(suit.equals(Card.SUITS[0]) || suit.equals(Card.SUITS[1]) || 
+                    suit.equals(Card.SUITS[2]) || suit.equals(Card.SUITS[3])){
+                userCard.setSuit(suit);
+                check = true;
+            }else{
+                System.out.println("Suit invalid");
+                check = false;
+            }
+        }while(!check); 
+        System.out.print("Value: " +userCard.getValue() +" Suit: "
+                +userCard.getSuit());
         
         // and search magicHand here 
         //Then report the result here
