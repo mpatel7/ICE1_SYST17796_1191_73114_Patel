@@ -64,7 +64,7 @@ public class CardTrick {
         
         luckyCard.setValue(7);
         luckyCard.setSuit("Spades");
-        System.out.println("Value: " +luckyCard.getValue(); +" Suit: "
+        System.out.println("Value: " +luckyCard.getValue() +" Suit: " 
                 +luckyCard.getSuit());
         
         // and search magicHand here 
