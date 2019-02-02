@@ -20,6 +20,7 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         Scanner scan = new Scanner(System.in);
         Card userCard = new Card();
+        Card luckyCard = new Card();
         
        for (int i=0; i<magicHand.length; i++)
        {
@@ -58,8 +59,13 @@ public class CardTrick {
                 check = false;
             }
         }while(!check); 
-        System.out.print("Value: " +userCard.getValue() +" Suit: "
+        System.out.println("Value: " +userCard.getValue() +" Suit: "
                 +userCard.getSuit());
+        
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Spades");
+        System.out.println("Value: " +luckyCard.getValue(); +" Suit: "
+                +luckyCard.getSuit());
         
         // and search magicHand here 
         //Then report the result here
