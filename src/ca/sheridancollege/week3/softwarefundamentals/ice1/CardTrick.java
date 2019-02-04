@@ -24,25 +24,26 @@ public class CardTrick {
             magicHand[i] = new Card();
             magicHand[i].setValue((int)(Math.random() * ((13 - 1) + 1)) + 1);
             magicHand[i].setSuit(Card.SUITS[(int)(Math.random() * ((3 - 0) + 1)) + 0]);
-            System.out.println(magicHand[i].getValue());
-            System.out.println(magicHand[i].getSuit());
         }
         Scanner input = new Scanner(System.in);
         Card luckyCard = new Card();
         luckyCard.setSuit("Hearts");
         luckyCard.setValue(12);
+        String suit = luckyCard.getSuit();
+        int value = luckyCard.getValue();
+        String output = "";
         for(int i = 0; i < magicHand.length; i++){
             int v = magicHand[i].getValue();
             String s = magicHand[i].getSuit();
             if(value == v && suit.equalsIgnoreCase(s)){
-                System.out.println("The card is in the magic hand!");
+                output = "The card is in the magic hand!";
                 break;
             }
             else{
-                System.out.println("The card is not in the magic hand...");
-                break;
+                output = "The card is not in the magic hand...";
             }
         }
+        System.out.println(output);
     }
     
 }
